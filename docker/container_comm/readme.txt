@@ -1,22 +1,23 @@
-##### Helloword client-server communication 
-######This example to show container communication on docker network. 
-server_hello application runs a container and client_hello runs in another container;
-both applications should be able to communicate on docker network=host type.
+############# Helloworld container communication on docker network ##############
+#################################################################################
 
 
-####### To pull images and run 
-##########
-[server]
-$ docker pull heersingh/server_hello:latest
-$ docker run --rm -it --net=host --name=sample_server  heersingh/server_hello:latest
-[client]
-$ docker pull heersingh/client_hello:latest
-$ docker run --rm -it --net=host --name=sample_client  heersingh/client_hello:latest
-
-######### To build images and run
+######### To build images
 ###########
-[server]
-
-[client]
 
 
+
+####### Pull pre-built images
+##########
+$ docker pull heersingh/server_cpp:latest
+$ docker pull heersingh/client_cpp:latest
+
+
+####### Run containers same host
+##########
+$ docker run -it --net host --name server  heersingh/server_cpp:latest
+$ docker run --rm -it --net host --name client  heersingh/client_cpp:latest
+
+
+####### Run containers on different hosts
+##########
