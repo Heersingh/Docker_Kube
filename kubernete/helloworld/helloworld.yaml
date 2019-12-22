@@ -15,5 +15,5 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: heersingh/hello_cpp:latest
+        image: hello-world
        

@@ -9,8 +9,8 @@
 
 ####### Pull pre-built images
 ##########
-$ docker pull heersingh/server_cpp:latest
-$ docker pull heersingh/client_cpp:latest
+$ docker pull hssingh/server_cpp:latest
+$ docker pull hssingh/client_cpp:latest
 
 
 ####### Run containers on different hosts
@@ -18,6 +18,6 @@ $ docker pull heersingh/client_cpp:latest
 [Create docker network on both hosts]
 $ docker network create --subnet=192.0.0.0/16 --gateway=192.0.0.1  my_net_bridge
 [Server]
-$ docker run -it --rm  --name server --net my_net_bridge --ip 192.0.0.2  heersingh/server_cpp:latest 
+$ docker run -it --rm  --name server --net my_net_bridge --ip 192.0.0.2  hssingh/server_cpp:latest 
 [client]
-$ docker run -it --rm  --name client --net my_net_bridge --ip 192.0.0.3  heersingh/client_cpp:latest 
+$ docker run -it --rm  --name client --net my_net_bridge --ip 192.0.0.3  hssingh/client_cpp:latest 
