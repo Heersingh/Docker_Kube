@@ -13,11 +13,12 @@ $ docker pull hssingh/server_cpp:latest
 $ docker pull hssingh/client_cpp:latest
 
 
-####### Run containers same host
+####### Communicate containers skiping virtual network (i.e, on host) 
 ##########
 $ docker run -it --net host --name server  hssingh/server_cpp:latest
 $ docker run --rm -it --net host --name client  hssingh/client_cpp:latest
 
 
-####### Run containers on different hosts
+####### Publish port
 ##########
+All containers on --network=host can communicate without exposing port (--publish).
